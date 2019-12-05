@@ -1,0 +1,1 @@
+INSERT INTO customer (active, address, email, name, phone) VALUES (b'1', '52 New Eskaton', 'milon@milon.com', 'Milon', '01718036126');

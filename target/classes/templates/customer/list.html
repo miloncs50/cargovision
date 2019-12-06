@@ -1,15 +1,12 @@
 <!DOCTYPE html>
 <html xmlns:th="http://www.thymeleaf.org">
-<head th:replace="layouts/header :: head">
+<head th:replace="template/muster :: head">
     <meta charset="UTF-8">
     <title>Title</title>
 </head>
 <body>
-<section th:replace="layouts/navbar :: navbar"></section>
-    <section>
-        
-    </section>
+<section th:replace="template/navbar :: navbar"></section>
+<th:block th:replace="template/script :: script"> </th:block>
 
-<section th:replace="layouts/footer :: footer"></section>
 </body>
 </html>

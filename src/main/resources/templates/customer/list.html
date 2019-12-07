@@ -1,12 +1,42 @@
 <!DOCTYPE html>
 <html xmlns:th="http://www.thymeleaf.org">
-<head th:replace="template/muster :: head">
-    <meta charset="UTF-8">
+<head>
+    <section th:replace="template/muster :: head-link"></section>
     <title>Title</title>
 </head>
 <body>
-<section th:replace="template/navbar :: navbar"></section>
-<th:block th:replace="template/script :: script"></th:block>
-
+<div id="wrapper">
+    <section th:replace="template/navbar :: navbar"></section>
+    <div class="content-page">
+        <!-- Start content -->
+        <div class="content">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-sm-12">
+                        <!-- Start content -->
+                        <h4 class="header-title m-t-0 m-b-20">List of Customer</h4>
+                        <!-- End content -->
+                        <table>
+                            <thead>
+                            <tr>
+                                <th>Sl</th>
+                                <th>Name</th>
+                            </tr>
+                            </thead>
+                            <tbody>
+                            <tr th:each="customer : ${customers}">
+                                <td th:text="${customer.id}"></td>
+                                <td th:text="${customer.name}"></td>
+                            </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+            <section th:replace="template/footer :: footer"></section>
+        </div>
+    </div>
+</div>
+<section th:replace="template/script :: script"></section>
 </body>
 </html>

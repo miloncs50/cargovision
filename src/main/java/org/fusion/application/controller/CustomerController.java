@@ -5,30 +5,38 @@ import org.fusion.application.repository.CustomerRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
-import org.springframework.web.bind.annotation.ModelAttribute;
-import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.validation.BindingResult;
+import org.springframework.web.bind.annotation.*;
 
+import javax.validation.Valid;
 import java.util.List;
 
 @Controller
+@RequestMapping("/customer/")
 public class CustomerController {
 
     @Autowired
     private CustomerRepository customerRepository;
 
-    @RequestMapping("/customer/list")
+    @RequestMapping("/list")
     public String getAll(Model model) {
+        model.addAttribute("customers", customerRepository.findAll());
         return "customer/list";
     }
 
-    @ModelAttribute("customer")
-    public List<Customer> getAll() {
-        return customerRepository.findAll();
+    @GetMapping("save")
+    public String customerNewForm(Model model) {
+        Customer customer = new Customer();
+        model.addAttribute("customer", customer);
+        return "customer/create_update";
     }
 
-    @RequestMapping("/customer-save")
-    public String saveNew(Model model) {
-        model.addAttribute("cus", new Customer());
-        return "customer/create_update";
+    @PostMapping("save")
+    public String customerSaveNew(@Valid Customer customer, BindingResult result) {
+        if (result.hasErrors()) {
+            return "customer/create_update";
+        }
+        customerRepository.save(customer);
+        return "redirect:list";
     }
 }

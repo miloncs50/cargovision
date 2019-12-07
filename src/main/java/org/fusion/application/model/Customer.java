@@ -9,15 +9,18 @@ import javax.persistence.*;
 public class Customer {
 
     @Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer id;
     private String name;
 
-    private String address;
+    public Customer() {
+    }
 
-    private String phone;
+    public Integer getId() {
+        return id;
+    }
 
-    private String email;
-
-    private Boolean active;
+    public void setId(Integer id) {
+        this.id = id;
+    }
 }

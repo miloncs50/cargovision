@@ -14,22 +14,12 @@
                 <div class="row">
                     <div class="col-sm-12">
                         <!-- Start content -->
-                        <h4 class="header-title m-t-0 m-b-20">List of Customer</h4>
+                        <h4 class="header-title m-t-0 m-b-20">Create New Customer</h4>
                         <!-- End content -->
-                        <table>
-                            <thead>
-                                <tr>
-                                    <th>Sl</th>
-                                    <th>Name</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                            <tr th:each="customer : ${customers}">
-                                <td th:text="${customer.id}"></td>
-                                <td th:text="${customer.name}"></td>
-                            </tr>
-                            </tbody>
-                        </table>
+                        <form action="#" method="post" th:action="@{/customer/save}" th:object="${customer}">
+                            <input th:field="*{name}" type="text">
+                            <input type="submit" value="Add Customer">
+                        </form>
                     </div>
                 </div>
             </div>

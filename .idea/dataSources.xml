@@ -7,5 +7,11 @@
       <jdbc-driver>com.mysql.cj.jdbc.Driver</jdbc-driver>
       <jdbc-url>jdbc:mysql://localhost:3306/logistics</jdbc-url>
     </data-source>
+    <data-source source="LOCAL" name="autos@localhost" uuid="f6bf7f50-4c33-4d69-9994-efe5982c7e8b">
+      <driver-ref>postgresql</driver-ref>
+      <synchronize>true</synchronize>
+      <jdbc-driver>org.postgresql.Driver</jdbc-driver>
+      <jdbc-url>jdbc:postgresql://localhost:5432/autos</jdbc-url>
+    </data-source>
   </component>
 </project>

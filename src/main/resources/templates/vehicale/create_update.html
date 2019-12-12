@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <section th:replace="template/muster :: head-link"></section>
+    <title>Title</title>
+</head>
+<body>
+<div id="wrapper">
+    <section th:replace="template/navbar :: navbar"></section>
+    <div class="content-page">
+        <!-- Start content -->
+        <div class="content">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-sm-12">
+                        <!-- Start content -->
+                        <h4 class="header-title m-t-0 m-b-20">Create or Update Vehicale</h4>
+                        <!-- End content -->
+                        <form class="form-horizontal m-t-10" role="form">
+                            <div class="form-group">
+                                <label class="col-sm-3 col-form-label" for="inputEmail3">Email</label>
+                                <div class="col-sm-9">
+                                    <input class="form-control" id="inputEmail3" placeholder="Email" type="email">
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label class="col-sm-3 col-form-label" for="inputPassword3">Password</label>
+                                <div class="col-sm-9">
+                                    <input class="form-control" id="inputPassword3" placeholder="Password"
+                                           type="password">
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label class="col-sm-3 col-form-label" for="inputPassword4">Re Password</label>
+                                <div class="col-sm-9">
+                                    <input class="form-control" id="inputPassword4" placeholder="Retype Password"
+                                           type="password">
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <div class="col-sm-offset-3 col-sm-9">
+                                    <div class="checkbox checkbox-info">
+                                        <input id="checkbox222" type="checkbox">
+                                        <label for="checkbox222">
+                                            Check me out !
+                                        </label>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="form-group m-b-0">
+                                <div class="col-sm-offset-3 col-sm-9">
+                                    <button class="btn btn-info" type="submit">Sign in</button>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+            <section th:replace="template/footer :: footer"></section>
+        </div>
+    </div>
+</div>
+<section th:replace="template/script :: script"></section>
+</body>
+</html>

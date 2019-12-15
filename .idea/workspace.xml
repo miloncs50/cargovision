@@ -2,26 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="57b42b54-274e-4d7e-a8f7-1222cb78ea2c" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/fusion/application/repository/VehicaleRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/fusion/application/controller/CustomerController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/fusion/application/controller/CustomerController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/fusion/application/controller/VehicaleController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/fusion/application/controller/VehicaleController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/fusion/application/model/Customer.java" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/assets/images/favicon.ico" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/assets/images/favicon.ico" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/assets/images/logo.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/assets/images/logo.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/assets/images/logo_sm.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/assets/images/logo_sm.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/assets/images/users/avatar-1.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/assets/images/users/avatar-1.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/customer/create_update.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/customer/create_update.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/customer/list.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/customer/list.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/vehicale/create_update.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/vehicale/create_update.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/vehicale/list.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/vehicale/list.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/application.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/templates/customer/list.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/customer/list.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/webapp.iml" beforeDir="false" afterPath="$PROJECT_DIR$/webapp.iml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -182,6 +164,7 @@
       <workItem from="1576308696907" duration="127000" />
       <workItem from="1576310888163" duration="66000" />
       <workItem from="1576316518338" duration="13487000" />
+      <workItem from="1576408518518" duration="489000" />
     </task>
     <task id="LOCAL-00001" summary="upload project">
       <created>1575622186637</created>
@@ -211,7 +194,14 @@
       <option name="project" value="LOCAL" />
       <updated>1576131640182</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="upload project">
+      <created>1576408722790</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1576408722790</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -257,10 +247,10 @@
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="413" y="113" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1366.728@0.0.1366.728" timestamp="1576317962919" />
-    <state x="321" y="0" key="CommitChangelistDialog2" timestamp="1576131636136">
+    <state x="321" y="0" key="CommitChangelistDialog2" timestamp="1576408716432">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="321" y="0" key="CommitChangelistDialog2/0.0.1366.728@0.0.1366.728" timestamp="1576131636136" />
+    <state x="321" y="0" key="CommitChangelistDialog2/0.0.1366.728@0.0.1366.728" timestamp="1576408716432" />
     <state x="510" y="121" key="FileChooserDialogImpl" timestamp="1576242466233">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
@@ -329,10 +319,10 @@
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="530" y="285" key="VCS.ChangelistChooser/0.0.1366.728@0.0.1366.728" timestamp="1575715600703" />
-    <state x="275" y="99" key="Vcs.Push.Dialog.v2" timestamp="1576131643821">
+    <state x="275" y="99" key="Vcs.Push.Dialog.v2" timestamp="1576408728508">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="275" y="99" key="Vcs.Push.Dialog.v2/0.0.1366.728@0.0.1366.728" timestamp="1576131643821" />
+    <state x="275" y="99" key="Vcs.Push.Dialog.v2/0.0.1366.728@0.0.1366.728" timestamp="1576408728508" />
     <state x="392" y="14" key="com.intellij.database.view.ui.AbstractDbRefactoringDialog" timestamp="1576045828982">
       <screen x="0" y="0" width="1366" height="728" />
     </state>

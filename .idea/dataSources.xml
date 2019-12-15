@@ -1,17 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="DataSourceManagerImpl" format="xml" multifile-model="true">
-    <data-source source="LOCAL" name="logistics@localhost" uuid="24146200-8d03-461f-a12c-885ff0f27398">
+    <data-source source="LOCAL" name="autos@localhost" uuid="24146200-8d03-461f-a12c-885ff0f27398">
       <driver-ref>mysql.8</driver-ref>
       <synchronize>true</synchronize>
       <jdbc-driver>com.mysql.cj.jdbc.Driver</jdbc-driver>
-      <jdbc-url>jdbc:mysql://localhost:3306/logistics</jdbc-url>
-    </data-source>
-    <data-source source="LOCAL" name="autos@localhost" uuid="f6bf7f50-4c33-4d69-9994-efe5982c7e8b">
-      <driver-ref>postgresql</driver-ref>
-      <synchronize>true</synchronize>
-      <jdbc-driver>org.postgresql.Driver</jdbc-driver>
-      <jdbc-url>jdbc:postgresql://localhost:5432/autos</jdbc-url>
+      <jdbc-url>jdbc:mysql://localhost:3306/autos</jdbc-url>
     </data-source>
   </component>
 </project>

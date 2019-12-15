@@ -1,5 +1,6 @@
 package org.fusion.application.controller;
 
+//import org.fusion.application.repository.CustomerRepository;
 import org.fusion.application.model.Customer;
 import org.fusion.application.repository.CustomerRepository;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -9,7 +10,7 @@ import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.*;
 
 import javax.validation.Valid;
-import java.util.List;
+import java.util.Optional;
 
 @Controller
 @RequestMapping("/customer/")
@@ -38,5 +39,12 @@ public class CustomerController {
         }
         customerRepository.save(customer);
         return "redirect:list";
+    }
+
+    @GetMapping("/edit/{id}")
+    public String updateCustomer(@PathVariable Integer id, Model model) {
+        Optional<Customer> customer = customerRepository.findById(id);
+        model.addAttribute("customer", customer);
+        return "customer/create_update";
     }
 }

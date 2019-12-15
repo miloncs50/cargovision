@@ -16,42 +16,35 @@
                         <!-- Start content -->
                         <h4 class="header-title m-t-0 m-b-20">Create or Update Vehicale</h4>
                         <!-- End content -->
-                        <form class="form-horizontal m-t-10" role="form">
+                        <form action="#" method="post" th:action="@{/vehicale/save}" th:object="${vehicales}">
+                            <input th:field="*{id}" type="hidden">
                             <div class="form-group">
-                                <label class="col-sm-3 col-form-label" for="inputEmail3">Email</label>
+                                <label class="col-sm-3 col-form-label" for="name">Name:</label>
                                 <div class="col-sm-9">
-                                    <input class="form-control" id="inputEmail3" placeholder="Email" type="email">
+                                    <input class="form-control" placeholder="Customer Name." th:field="*{name}"
+                                           type="text">
                                 </div>
                             </div>
                             <div class="form-group">
-                                <label class="col-sm-3 col-form-label" for="inputPassword3">Password</label>
+                                <label class="col-sm-3 col-form-label" for="active">Owner:</label>
                                 <div class="col-sm-9">
-                                    <input class="form-control" id="inputPassword3" placeholder="Password"
-                                           type="password">
+                                    <select class="form-control" th:field="*{customer.id}">
+                                        <option th:each="i : ${getcustomerlist}" th:text="${i.name}"
+                                                th:value="${i.id}"></option>
+                                    </select>
                                 </div>
                             </div>
+
                             <div class="form-group">
-                                <label class="col-sm-3 col-form-label" for="inputPassword4">Re Password</label>
+                                <label class="col-sm-3 col-form-label" for="active">Status:</label>
                                 <div class="col-sm-9">
-                                    <input class="form-control" id="inputPassword4" placeholder="Retype Password"
-                                           type="password">
+                                    <select class="form-control" th:field="*{active}">
+                                        <option value="1">Active</option>
+                                        <option value="0">Inactive</option>
+                                    </select>
                                 </div>
                             </div>
-                            <div class="form-group">
-                                <div class="col-sm-offset-3 col-sm-9">
-                                    <div class="checkbox checkbox-info">
-                                        <input id="checkbox222" type="checkbox">
-                                        <label for="checkbox222">
-                                            Check me out !
-                                        </label>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="form-group m-b-0">
-                                <div class="col-sm-offset-3 col-sm-9">
-                                    <button class="btn btn-info" type="submit">Sign in</button>
-                                </div>
-                            </div>
+                            <input class="btn btn-success btn-sm" type="submit" value="Add Vehicale">
                         </form>
                     </div>
                 </div>

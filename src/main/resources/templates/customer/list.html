@@ -41,7 +41,7 @@
                                     <span th:if="${customer.active == 1}">Active</span>
                                     <span th:unless="${customer.active == 1}">Inactive</span>
                                 </td>
-                                <td th:text="${customer.createdBy}"></td>
+                                <td th:text="${customer.created}"></td>
                                 <td><a th:href="@{/customer/edit/{id}(id=${customer.id})}">Edit</td>
                             </tr>
                             </tbody>

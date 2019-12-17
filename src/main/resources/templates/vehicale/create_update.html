@@ -2,7 +2,6 @@
 <html xmlns:th="http://www.thymeleaf.org">
 <head>
     <section th:replace="template/muster :: head-link"></section>
-    <title>Title</title>
 </head>
 <body>
 <div id="wrapper">
@@ -29,7 +28,7 @@
                                 <label class="col-sm-3 col-form-label" for="active">Owner:</label>
                                 <div class="col-sm-9">
                                     <select class="form-control" th:field="*{customer.id}">
-                                        <option th:each="i : ${getcustomerlist}" th:text="${i.name}"
+                                        <option th:each="i : ${owner}" th:text="${i.name}"
                                                 th:value="${i.id}"></option>
                                     </select>
                                 </div>

@@ -28,10 +28,10 @@
                             </tr>
                             </thead>
                             <tbody>
-                            <tr th:each="vehicale: ${getvehicale}">
+                            <tr th:each="vehicale: ${getvehicales}">
                                 <td th:text="${vehicale.id}"></td>
                                 <td th:text="${vehicale.name}"></td>
-                                <td th:text="${vehicale.customer.name}"></td>
+                                <td th:text="${vehicale.customer}"></td>
                                 <td>
                                     <span th:if="${vehicale.active == 1}">Active</span>
                                     <span th:unless="${vehicale.active == 1}">Inactive</span>

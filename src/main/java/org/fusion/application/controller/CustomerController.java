@@ -21,7 +21,8 @@ public class CustomerController {
 
     @RequestMapping("/list")
     public String getAll(Model model) {
-        model.addAttribute("customers", customerRepository.findAll());
+        //model.addAttribute("customers", customerRepository.findAll());
+        model.addAttribute("customers", customerRepository.getAllCustomer());
         return "customer/list";
     }
 

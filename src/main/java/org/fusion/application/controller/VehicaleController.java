@@ -1,5 +1,6 @@
 package org.fusion.application.controller;
 
+import org.fusion.application.dao.VehicaleInterface;
 import org.fusion.application.model.Customer;
 import org.fusion.application.model.Vehicale;
 import org.fusion.application.repository.CustomerRepository;
@@ -24,18 +25,9 @@ public class VehicaleController {
         this.customerRepository = customerRepository;
     }
 
-    @ModelAttribute("getcustomerlist")
-    public List<Customer> getCustomerList() {
-        return customerRepository.findAll();
-    }
-
-    @ModelAttribute("getvehicale")
-    public List<Vehicale> getAllVehicale() {
-        return vehicaleRepository.findAll();
-    }
-
     @GetMapping
     public String getAllVehicale(Model model) {
+        model.addAttribute("getvehicales", vehicaleRepository.getVehivaleAll());
         return "vehicale/list";
     }
 
@@ -43,14 +35,14 @@ public class VehicaleController {
     public String createNew(Model model) {
         Vehicale vehicale = new Vehicale();
         model.addAttribute("vehicales", vehicale);
-        model.addAttribute("owner", customerRepository.findAll());
+        model.addAttribute("owner", customerRepository.getAllCustomer());
         return "vehicale/create_update";
     }
 
     @PostMapping("/save")
     public String saveVehicale(@Valid Vehicale vehicale, BindingResult bindingResult) {
         vehicaleRepository.save(vehicale);
-        return "vehicale/list";
+        return "redirect:/vehicale";
     }
 
     @GetMapping("/edit/{id}")

@@ -14,34 +14,30 @@
                 <div class="row">
                     <div class="col-sm-12">
                         <!-- Start content -->
-                        <h4 class="header-title m-t-0 m-b-20">Import List</h4>
+                        <h4 class="header-title m-t-0 m-b-20">Blank Page</h4>
                         <!-- End content -->
                         <table cellspacing="0" class="table table-striped table-bordered" id="datatable-buttons"
                                width="100%">
                             <thead>
                             <tr>
                                 <th>Sl</th>
-                                <th>Date</th>
-                                <th>Vehicale No</th>
-                                <th>Transport</th>
-                                <th>Weight</th>
-                                <th>Note</th>
-                                <th>Create AT</th>
+                                <th>Vehicale Name</th>
+                                <th>Vehicale Owner</th>
+                                <th>Status</th>
                                 <th>Action</th>
                             </tr>
                             </thead>
                             <tbody>
-                            <tr th:each="import : ${imports}">
-                                <td th:text="${import.id}"></td>
-                                <td th:text="${import.date}"></td>
-                                <td th:text="${import.vehicale}"></td>
-                                <td th:text="${import.transport}"></td>
-                                <td th:text="${import.weight}"></td>
-                                <td th:text="${import.note}"></td>
-                                <td th:text="${import.created}"></td>
-                                <td><a class="btn btn-info" th:href="@{/import/edit/{id}(id=${import.id})}"><i
-                                        class="ti-pencil-alt"> </i>Edit</a>
+                            <tr th:each="vehicale: ${getvehicales}">
+                                <td th:text="${vehicale.id}"></td>
+                                <td th:text="${vehicale.name}"></td>
+                                <td th:text="${vehicale.customer}"></td>
+                                <td>
+                                    <span th:if="${vehicale.active == 1}">Active</span>
+                                    <span th:unless="${vehicale.active == 1}">Inactive</span>
                                 </td>
+                                <td><a class="btn btn-info" th:href="@{/vehicale/edit/{id}(id=${vehicale.id})}"><i
+                                        class="ti-pencil-alt"> </i>Edit</a></td>
                             </tr>
                             </tbody>
                         </table>

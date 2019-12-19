@@ -44,7 +44,6 @@ class Imports {
     @Column(name = "update_at", nullable = true)
     private Timestamp updateAt;
 
-
     @ManyToOne
     @JoinColumn(name = "entry_by", referencedColumnName = "id", nullable = true)
     private Users EntryBy;

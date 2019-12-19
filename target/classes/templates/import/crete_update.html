@@ -21,7 +21,7 @@
                                 <div class="col">
                                     <div>
                                         <label for="Date">Date:</label>
-                                        <input class="form-control" th:field="*{date}" type="date">
+                                        <input th:field="*{date}" type="date" class="form-control">
                                         <small class="form-text text-danger"></small>
                                     </div>
                                 </div>
@@ -38,8 +38,7 @@
                                 <div class="col">
                                     <div>
                                         <label for="exampleInputEmail1">Transport Name:</label>
-                                        <input class="form-control" placeholder="Enter Transport Name:"
-                                               th:field="*{transport}" type="text">
+                                        <input th:field="*{transport}" type="text" class="form-control" placeholder="Enter Transport Name:">
                                         <small class="form-text text-danger"></small>
                                     </div>
                                 </div>
@@ -49,32 +48,29 @@
                                 <div class="col">
                                     <div>
                                         <label for="Weight">Weight:</label>
-                                        <input class="form-control" placeholder="Enter Goods Weight."
-                                               th:field="*{weight}" type="text">
+                                        <input th:field="*{weight}" type="text" class="form-control" placeholder="Enter Goods Weight.">
                                         <small class="form-text text-danger"></small>
                                     </div>
                                 </div>
                                 <div class="col">
                                     <div>
                                         <label for="Fare">Fare:</label>
-                                        <input class="form-control" placeholder="Enter Vehicale Rent Amount."
-                                               th:field="*{fare}" type="text">
+                                        <input th:field="*{fare}" type="text" class="form-control" placeholder="Enter Vehicale Rent Amount.">
                                         <small class="form-text text-danger"></small>
                                     </div>
                                 </div>
                                 <div class="col">
                                     <div>
                                         <label for="Note">Note</label>
-                                        <input class="form-control" placeholder="Enter Any Note:" th:field="*{note}"
-                                               type="text">
+                                        <input th:field="*{note}" type="text" class="form-control" placeholder="Enter Any Note:">
                                         <small class="form-text text-danger"></small>
                                     </div>
                                 </div>
 
                             </div>
                             <div class="form-group">
-                                <input class="btn btn-success" type="submit" value="Add Impoer Program">
-                                <input class="btn btn-warning" type="reset" value="Clear Program">
+                                <input type="submit" value="Add Impoer Program" class="btn btn-success">
+                                <input type="reset" value="Clear Program" class="btn btn-warning">
                             </div>
                         </form>
                     </div>

@@ -26,10 +26,9 @@ public class ImportController {
         this.importRepository = importRepository;
     }
 
-    @GetMapping
+    @GetMapping(value = {"", "/list"})
     public String getAllImport(Model model) {
-        List<ImportDAO> imports = importRepository.getAllImport();
-        model.addAttribute("imports", imports);
+        model.addAttribute("imports", importRepository.listAllImports());
         return "import/list";
     }
 
@@ -47,6 +46,6 @@ public class ImportController {
             return "import/crete_update";
         }
         importRepository.save(imports);
-        return "import/list";
+        return "redirect:/import/list";
     }
 }
